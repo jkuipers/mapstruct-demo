@@ -6,7 +6,7 @@ import org.mapstruct.Mapping;
 @Mapper
 public interface TalkMapper {
 
-    @Mapping(target = "room", ignore = true)
+    @Mapping(target = "room", source = "location")
     TalkDTO toDTO(Talk talk);
 
 }

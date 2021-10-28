@@ -14,6 +14,7 @@ public class Demo {
         talk.setName("Get Set Go! An intro to MapStruct");
         talk.setDurationInMinutes(16L);
         talk.setSpeaker(joris);
+        talk.setLocation("The room you're currently in");
 
         TalkDTO talkDTO = mapper.toDTO(talk);
         System.out.println(talkDTO);
