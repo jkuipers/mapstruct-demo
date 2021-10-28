@@ -2,10 +2,17 @@ package nl.trifork.mapstructdemo;
 
 public class TalkDTO {
 
+    enum Type {
+        BYTESIZE,
+        REGULAR,
+        WORKSHOP
+    }
+
     private String name;
     private SpeakerDTO speaker;
     private long durationInMinutes;
     private String room;
+    private Type type;
 
     public String getName() {
         return name;
@@ -39,6 +46,14 @@ public class TalkDTO {
         this.room = room;
     }
 
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "TalkDTO{" +
@@ -46,6 +61,7 @@ public class TalkDTO {
                 ", speaker=" + speaker +
                 ", durationInMinutes=" + durationInMinutes +
                 ", room='" + room + '\'' +
+                ", type=" + type +
                 '}';
     }
 }

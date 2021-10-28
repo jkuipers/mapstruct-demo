@@ -14,6 +14,7 @@ public class Demo {
         talk.setName("Get Set Go! An intro to MapStruct");
         talk.setDurationInMinutes(16L);
         talk.setSpeaker(joris);
+        talk.setType(Talk.Type.BYTESIZE);
 
         Location location = new Location();
         location.setName("The room you're currently in");

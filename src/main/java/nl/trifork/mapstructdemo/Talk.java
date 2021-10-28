@@ -2,10 +2,17 @@ package nl.trifork.mapstructdemo;
 
 public class Talk {
 
+    enum Type {
+        BYTESIZE,
+        REGULAR,
+        WORKSHOP
+    }
+
     private String name;
     private Speaker speaker;
     private long durationInMinutes;
     private Location location;
+    private Type type;
 
     public String getName() {
         return name;
@@ -37,5 +44,13 @@ public class Talk {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 }
