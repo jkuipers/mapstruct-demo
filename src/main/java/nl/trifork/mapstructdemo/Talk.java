@@ -5,7 +5,7 @@ public class Talk {
     private String name;
     private Speaker speaker;
     private long durationInMinutes;
-    private String location;
+    private Location location;
 
     public String getName() {
         return name;
@@ -31,11 +31,11 @@ public class Talk {
         this.durationInMinutes = durationInMinutes;
     }
 
-    public String getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 }
