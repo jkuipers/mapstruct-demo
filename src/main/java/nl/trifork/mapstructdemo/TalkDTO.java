@@ -5,6 +5,7 @@ public class TalkDTO {
     private String name;
     private SpeakerDTO speaker;
     private long durationInMinutes;
+    private String room;
 
     public String getName() {
         return name;
@@ -30,12 +31,21 @@ public class TalkDTO {
         this.durationInMinutes = durationInMinutes;
     }
 
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
     @Override
     public String toString() {
         return "TalkDTO{" +
                 "name='" + name + '\'' +
-                ", speaker='" + speaker + '\'' +
+                ", speaker=" + speaker +
                 ", durationInMinutes=" + durationInMinutes +
+                ", room='" + room + '\'' +
                 '}';
     }
 }
