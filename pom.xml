@@ -36,9 +36,9 @@
                         </path>
                     </annotationProcessorPaths>
                     <showWarnings>true</showWarnings>
-<!--                    <compilerArgs>-->
-<!--                        <arg>-Amapstruct.unmappedTargetPolicy=ERROR</arg>-->
-<!--                    </compilerArgs>-->
+                    <compilerArgs>
+                        <arg>-Amapstruct.unmappedTargetPolicy=ERROR</arg>
+                    </compilerArgs>
                 </configuration>
 			</plugin>
 		</plugins>
