@@ -3,6 +3,7 @@ package nl.trifork.mapstructdemo;
 import org.mapstruct.factory.Mappers;
 
 import java.net.URI;
+import java.time.Duration;
 
 public class Demo {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class Demo {
 
         Talk talk = new Talk();
         talk.setName("Get Set Go! An intro to MapStruct");
-        talk.setDurationInMinutes(16L);
+        talk.setDuration(Duration.ofMinutes(16L));
         talk.setSpeaker(joris);
         talk.setType(Talk.Type.BYTESIZE);
 

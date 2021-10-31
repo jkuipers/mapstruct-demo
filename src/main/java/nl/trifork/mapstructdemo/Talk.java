@@ -1,5 +1,7 @@
 package nl.trifork.mapstructdemo;
 
+import java.time.Duration;
+
 public class Talk {
 
     enum Type {
@@ -10,7 +12,7 @@ public class Talk {
 
     private String name;
     private Speaker speaker;
-    private long durationInMinutes;
+    private Duration duration;
     private Location location;
     private Type type;
 
@@ -30,12 +32,12 @@ public class Talk {
         this.speaker = speaker;
     }
 
-    public long getDurationInMinutes() {
-        return durationInMinutes;
+    public Duration getDuration() {
+        return duration;
     }
 
-    public void setDurationInMinutes(long durationInMinutes) {
-        this.durationInMinutes = durationInMinutes;
+    public void setDuration(Duration duration) {
+        this.duration = duration;
     }
 
     public Location getLocation() {

@@ -9,6 +9,8 @@ import org.mapstruct.ValueMapping;
 public interface TalkMapper {
 
     @Mapping(target = "room", source = "location.name")
+    @Mapping(target = "durationInMinutes",
+             expression = "java(talk.getDuration() == null ? null : talk.getDuration().toMinutes())")
     TalkDTO toDTO(Talk talk);
 
     @ValueMapping(target = "OTHER", source = MappingConstants.ANY_REMAINING)
