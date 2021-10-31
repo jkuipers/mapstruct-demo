@@ -2,6 +2,7 @@ package nl.trifork.mapstructdemo;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.ValueMapping;
 
 @Mapper
 public interface TalkMapper {
@@ -9,4 +10,6 @@ public interface TalkMapper {
     @Mapping(target = "room", source = "location.name")
     TalkDTO toDTO(Talk talk);
 
+    @ValueMapping(target = "OTHER", source = "WORKSHOP")
+    TalkDTO.Type toDTO(Talk.Type type);
 }
