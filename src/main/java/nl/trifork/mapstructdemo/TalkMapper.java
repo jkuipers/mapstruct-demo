@@ -1,6 +1,7 @@
 package nl.trifork.mapstructdemo;
 
 import org.mapstruct.AfterMapping;
+import org.mapstruct.InheritConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
@@ -16,6 +17,7 @@ public interface TalkMapper {
     @Mapping(target = "durationInMinutes", ignore = true)
     TalkDTO toDTO(Talk talk);
 
+    @InheritConfiguration
     void updateTalkDTO(Talk talk, @MappingTarget TalkDTO dto);
 
     @AfterMapping
