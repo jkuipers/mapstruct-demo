@@ -2,13 +2,15 @@ package nl.trifork.mapstructdemo;
 
 import org.mapstruct.factory.Mappers;
 
+import java.net.URI;
+
 public class Demo {
     public static void main(String[] args) {
         TalkMapper mapper = Mappers.getMapper(TalkMapper.class);
 
         Speaker joris = new Speaker();
         joris.setName("Joris Kuipers");
-        joris.setTwitterUrl("https://twitter.com/jkuipers");
+        joris.setTwitterUrl(URI.create("https://twitter.com/jkuipers"));
 
         Talk talk = new Talk();
         talk.setName("Get Set Go! An intro to MapStruct");

@@ -1,8 +1,10 @@
 package nl.trifork.mapstructdemo;
 
+import java.net.URI;
+
 public class Speaker {
     private String name;
-    private String twitterUrl;
+    private URI twitterUrl;
 
     public String getName() {
         return name;
@@ -12,11 +14,11 @@ public class Speaker {
         this.name = name;
     }
 
-    public String getTwitterUrl() {
+    public URI getTwitterUrl() {
         return twitterUrl;
     }
 
-    public void setTwitterUrl(String twitterUrl) {
+    public void setTwitterUrl(URI twitterUrl) {
         this.twitterUrl = twitterUrl;
     }
 }
