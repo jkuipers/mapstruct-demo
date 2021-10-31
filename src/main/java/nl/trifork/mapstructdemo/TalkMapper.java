@@ -16,6 +16,8 @@ public interface TalkMapper {
     @Mapping(target = "durationInMinutes", ignore = true)
     TalkDTO toDTO(Talk talk);
 
+    void updateTalkDTO(Talk talk, @MappingTarget TalkDTO dto);
+
     @AfterMapping
     default void duration(Talk talk, @MappingTarget TalkDTO dto) {
         Duration duration = talk.getDuration();
