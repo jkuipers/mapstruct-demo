@@ -5,7 +5,7 @@ public class TalkDTO {
     enum Type {
         BYTESIZE,
         REGULAR,
-        WORKSHOP
+        OTHER
     }
 
     private String name;
